@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Background + Content + Interval Images</title>
+  <style>
+    /* Basic reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Body uses the background image */
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      /* Background image: replace 'background.jpg' with your path */
+      background-image: url(them2.jpeg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      /* Smooth text on background */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* Optional overlay to improve contrast on top of background */
+    .overlay {
+      position: absolute;
+      inset: 0; /* top:0; right:0; bottom:0; left:0; */
+      background: rgba(26, 61, 200, 0.4); /* adjust opacity as needed */
+      pointer-events: none; /* allow clicks to pass through to content */
+      z-index: 0;
+    }
+
+    /* Main content container (separate tag for content) */
+    main.content {
+      position: relative;
+      z-index: 1; /* sit above the overlay */
+      width: 100%;
+      max-width: 1100px;
+      background: rgba(233, 22, 22, 0.88); /* slightly translucent card */
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(161, 233, 16, 0.25);
+      overflow: hidden;
+    }
+
+    /* Header inside content */
+    .content header {
+      margin-bottom: 18px;
+    }
+    .content h1 {
+      font-size: 1.6rem;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .content p.lead {
+      color: #0ee62f;
+      line-height: 1.45;
+      font-size: 0.98rem;
+    }
+
+    /* Gallery of images spaced in intervals */
+    .gallery {
+      display: grid;
+      /* three columns on wide screens, fewer on small screens */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px; /* interval spacing between images */
+      margin-top: 20px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      background: #f2de28;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      max-height: 220px;
+    }
+
+    .caption {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+      color: #f6931b;
+      background: rgba(32, 247, 236, 0.9);
+      text-align: center;
+    }
+
+    /* Make the layout responsive */
+    @media (max-width: 900px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    }
+    @media (max-width: 520px) {
+      body { padding: 1rem; }
+      .gallery { grid-template-columns: 1fr; gap: 12px; }
+      .content { padding: 18px; border-radius: 10px; }
+      .content h1 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- overlay improves readability on top of complex backgrounds -->
+  <div class="overlay" aria-hidden="true"></div>
+
+  <!-- main content area (separate tag for all page content) -->
+  <main class="content" role="main" aria-labelledby="page-title">
+    <header>
+      <h1 id="page-title">DRAGON BALL</h1>
+      <p class="lead">“Dragon Ball follows Goku’s adventures as he protects Earth and searches for the magical Dragon Balls.</p>
+    </header>
+
+    <!-- Example text content -->
+    <section>
+      <p>
+        Dragon Ball is a famous Japanese animated series created by Akira Toriyama. 
+        The story follows Goku, a cheerful and powerful boy with a monkey-like tail, as he travels around the world in search of the seven magical Dragon Balls. When all seven are collected, 
+        they can summon a mighty dragon that grants one wish. The series mixes adventure, action, humor, friendship, and fantasy, making it one of the most popular and influential shows in the world. Through his journey, Goku meets many allies, 
+        faces tough challenges, and constantly grows stronger while protecting Earth from dangerous enemies. The series teaches values like courage, teamwork, determination, and kindness.
+      </p>
+    </section>
+
+    <!-- Image gallery with images in intervals (spacing controlled by CSS grid gap) -->
+    <section class="gallery" aria-label="Image gallery">
+      <figure>
+        <!-- replace 'photo1.jpg' with your actual image -->
+        <img src="dragonball.jpg" alt="Photo 1 description" loading="lazy">
+        <figcaption class="caption">All major Dragon Ball heroes and villains together</figcaption>
+      </figure>
+
+      <figure>
+        <img src="dragon-ball-2.jpg" alt="Photo 2 description" loading="lazy">
+        <figcaption class="caption">Goku and Vegeta lead the action in Dragon Ball Super.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="AWl1ZO3.webp" alt="Photo 3 description" loading="lazy">
+        <figcaption class="caption">Universe fighters gather for a Dragon Ball Super battle.</figcaption>
+      </figure>
+
+      <!-- add or remove figure blocks as needed -->
+    </section>
+  </main>
+</body>
+</html>
