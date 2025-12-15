@@ -1,158 +1,58 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Background + Content + Interval Images</title>
-  <style>
-    /* Basic reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /* Body uses the background image */
-    body {
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      /* Background image: replace 'background.jpg' with your path */
-      background-image: url(money-heist-.avif);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      /* Smooth text on background */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    /* Optional overlay to improve contrast on top of background */
-    .overlay {
-      position: absolute;
-      inset: 0; /* top:0; right:0; bottom:0; left:0; */
-      background: rgba(26, 61, 200, 0.4); /* adjust opacity as needed */
-      pointer-events: none; /* allow clicks to pass through to content */
-      z-index: 0;
-    }
-
-    /* Main content container (separate tag for content) */
-    main.content {
-      position: relative;
-      z-index: 1; /* sit above the overlay */
-      width: 100%;
-      max-width: 1100px;
-      background: rgba(233, 22, 22, 0.88); /* slightly translucent card */
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(161, 233, 16, 0.25);
-      overflow: hidden;
-    }
-
-    /* Header inside content */
-    .content header {
-      margin-bottom: 18px;
-    }
-    .content h1 {
-      font-size: 1.6rem;
-      color: #111111;
-      margin-bottom: 6px;
-    }
-    .content p.lead {
-      color: #0ee62f;
-      line-height: 1.45;
-      font-size: 0.98rem;
-    }
-
-    /* Gallery of images spaced in intervals */
-    .gallery {
-      display: grid;
-      /* three columns on wide screens, fewer on small screens */
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px; /* interval spacing between images */
-      margin-top: 20px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      background: #f2de28;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 140px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      max-height: 220px;
-    }
-
-    .caption {
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      color: #f6931b;
-      background: rgba(32, 247, 236, 0.9);
-      text-align: center;
-    }
-
-    /* Make the layout responsive */
-    @media (max-width: 900px) {
-      .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    }
-    @media (max-width: 520px) {
-      body { padding: 1rem; }
-      .gallery { grid-template-columns: 1fr; gap: 12px; }
-      .content { padding: 18px; border-radius: 10px; }
-      .content h1 { font-size: 1.3rem; }
-    }
-  </style>
+  <title>MONEY HEIST</title>
 </head>
-<body>
-  <!-- overlay improves readability on top of complex backgrounds -->
-  <div class="overlay" aria-hidden="true"></div>
 
-  <!-- main content area (separate tag for all page content) -->
-  <main class="content" role="main" aria-labelledby="page-title">
-    <header>
-      <h1 id="page-title">MONEY HEIST</h1>
-      <p class="lead">Money Heist follows a brilliant mastermind and his team as they carry out daring, high-pressure robberies filled with strategy, suspense, and emotion.</p>
-    </header>
+<body background="money-heist-.avif">
 
-    <!-- Example text content -->
-    <section>
-      <p>
-       Money Heist is a Spanish crime‑thriller series that follows The Professor, a mastermind who leads a daring plan to infiltrate the Royal Mint of Spain and print billions of euros.
-       The concept centers on rebellion against the system, with robbers in red jumpsuits and Salvador Dalí masks becoming symbols of resistance. 
-       Main roles include Tokyo, Berlin, Nairobi, Rio, Denver, Moscow, Helsinki, and Oslo, each contributing unique skills to the heist. They ultimately succeed through 
-       meticulous planning, unity, and public sympathy, making the series an intense crime drama thriller filled with suspense and emotion
+<center>
 
-      </p>
-    </section>
+  <table width="85%" bgcolor="red" cellpadding="25">
+    <tr>
+      <td align="center">
 
-    <!-- Image gallery with images in intervals (spacing controlled by CSS grid gap) -->
-    <section class="gallery" aria-label="Image gallery">
-      <figure>
-        <!-- replace 'photo1.jpg' with your actual image -->
-        <img src="moneyhist1.jpeg" alt="Photo 1 description" loading="lazy">
-        <figcaption class="caption">The Professor’s team unites in their iconic red suits to execute a high-stakes, mastermind-planned heist</figcaption>
-      </figure>
+        <h1>MONEY HEIST</h1>
 
-      <figure>
-        <img src="arpan-gupta-final-composite-2.jpg" alt="Photo 2 description" loading="lazy">
-        <figcaption class="caption">The story centers around a daring heist inside Spain’s Royal Mint, planned with precision and secrecy.</figcaption>
-      </figure>
+        <p>
+          <b>
+            Money Heist follows a brilliant mastermind and his team as they carry out
+            daring, high-pressure robberies filled with strategy, suspense, and emotion.
+          </b>
+        </p>
 
-      <figure>
-        <img src="FireShotmoneyhist-3.webp" alt="Photo 3 description" loading="lazy">
-        <figcaption class="caption">The gang faces escalating danger and emotional battles as their heist turns into a desperate fight to escape</figcaption>
-      </figure>
+        <p>
+          Money Heist is a Spanish crime-thriller series centered on The Professor,
+          who plans an audacious heist at the Royal Mint of Spain to print billions of euros.
+          The robbers, wearing red jumpsuits and Salvador Dalí masks, become symbols of rebellion.
+          Characters like Tokyo, Berlin, Nairobi, Rio, Denver, and others contribute their
+          unique skills. The series is known for its intense suspense, emotional depth,
+          and clever storytelling.
+        </p>
 
-      <!-- add or remove figure blocks as needed -->
-    </section>
-  </main>
-</body>
-</html>
+        <br>
+
+        <!-- Image Gallery -->
+        <table width="100%" cellpadding="20">
+          <tr>
+            <td align="center">
+              <img src="moneyhist1.jpeg" width="250"><br>
+              <font color="orange">
+                The Professor’s team unites in iconic red suits for a high-stakes heist
+              </font>
+            </td>
+
+            <td align="center">
+              <img src="arpan-gupta-final-composite-2.jpg" width="250"><br>
+              <font color="orange">
+                A daring and secret plan unfolds inside Spain’s Royal Mint
+              </font>
+            </td>
+
+            <td align="center">
+              <img src="FireShotmoneyhist-3.webp" width="250"><br>
+              <font color="orange">
+                The gang faces danger and emotional struggle during their escape
+              </font>
+            </td>
+          <

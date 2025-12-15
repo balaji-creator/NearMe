@@ -1,5 +1,5 @@
 # Ex04 Places Around Me
-## Date:11-12-2025 
+## Date:10-12-2025 
 
 ## AIM
 To develop a website to display details about the places around my house.
@@ -48,492 +48,198 @@ home.html
 </map> 
 </body>
 </html>
-
+```
 india.html
-
-<!doctype html>
+!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Background + Content + Interval Images</title>
-  <style>
-    /* Basic reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /* Body uses the background image */
-    body {
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      /* Background image: replace 'background.jpg' with your path */
-      background-image: url(home.mett\ oli.webp);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      /* Smooth text on background */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    /* Optional overlay to improve contrast on top of background */
-    .overlay {
-      position: absolute;
-      inset: 0; /* top:0; right:0; bottom:0; left:0; */
-      background: rgba(26, 61, 200, 0.4); /* adjust opacity as needed */
-      pointer-events: none; /* allow clicks to pass through to content */
-      z-index: 0;
-    }
-
-    /* Main content container (separate tag for content) */
-    main.content {
-      position: relative;
-      z-index: 1; /* sit above the overlay */
-      width: 100%;
-      max-width: 1100px;
-      background: rgba(233, 22, 22, 0.88); /* slightly translucent card */
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(161, 233, 16, 0.25);
-      overflow: hidden;
-    }
-
-    /* Header inside content */
-    .content header {
-      margin-bottom: 18px;
-    }
-    .content h1 {
-      font-size: 1.6rem;
-      color: #111111;
-      margin-bottom: 6px;
-    }
-    .content p.lead {
-      color: #0ee62f;
-      line-height: 1.45;
-      font-size: 0.98rem;
-    }
-
-    /* Gallery of images spaced in intervals */
-    .gallery {
-      display: grid;
-      /* three columns on wide screens, fewer on small screens */
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px; /* interval spacing between images */
-      margin-top: 20px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      background: #f2de28;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 140px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      max-height: 220px;
-    }
-
-    .caption {
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      color: #f6931b;
-      background: rgba(32, 247, 236, 0.9);
-      text-align: center;
-    }
-
-    /* Make the layout responsive */
-    @media (max-width: 900px) {
-      .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    }
-    @media (max-width: 520px) {
-      body { padding: 1rem; }
-      .gallery { grid-template-columns: 1fr; gap: 12px; }
-      .content { padding: 18px; border-radius: 10px; }
-      .content h1 { font-size: 1.3rem; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <title>METTI OLI</title>
 </head>
-<body>
-  <!-- overlay improves readability on top of complex backgrounds -->
-  <div class="overlay" aria-hidden="true"></div>
 
-  <!-- main content area (separate tag for all page content) -->
-  <main class="content" role="main" aria-labelledby="page-title">
-    <header>
-      <h1 id="page-title">METTI OLI</h1>
-      <p class="lead">Most wached Serial in India Over 50.1%</p>
-    </header>
+<body background="home.mett oli.webp">
 
-    <!-- Example text content -->
-    <section>
-      <p>
-        Mettioli is a family-drama serial that follows the journey of a kind-hearted woman who enters a troubled household flled with misunderstandings and hidden tensions.
-        Despite facing jealousy and constant challenges, she slowly brings warmth, unity, and hope to everyone around her. 
-        Through her patience, courage, and positive actions, she helps resolve long-standing conflicts and transforms the home into a place of trust and togetherness. 
-        The serial highlights how simple acts of kindness can heal hearts and change lives.
-      </p>
-    </section>
+  <center>
+    <table width="80%" bgcolor="#e91616" cellpadding="20" cellspacing="0">
+      <tr>
+        <td align="center">
 
-    <!-- Image gallery with images in intervals (spacing controlled by CSS grid gap) -->
-    <section class="gallery" aria-label="Image gallery">
-      <figure>
-        <!-- replace 'photo1.jpg' with your actual image -->
-        <img src="mettioli-1.jpg" alt="Photo 1 description" loading="lazy">
-        <figcaption class="caption">Healing Through Kindness</figcaption>
-      </figure>
+          <h1>METTI OLI</h1>
+          <p><b>Most watched Serial in India Over 50.1%</b></p>
 
-      <figure>
-        <img src="Metti_Oli-2.jpg" alt="Photo 2 description" loading="lazy">
-        <figcaption class="caption">Strength in Family Bonds</figcaption>
-      </figure>
+          <p>
+            Mettioli is a family-drama serial that follows the journey of a kind-hearted woman
+            who enters a troubled household filled with misunderstandings and hidden tensions.
+            Despite jealousy and challenges, she brings unity and hope.
+            The serial shows how kindness can heal hearts and change lives.
+          </p>
 
-      <figure>
-        <img src="mettioli-3.jpg" alt="Photo 3 description" loading="lazy">
-        <figcaption class="caption">Courage to Do What’s Right</figcaption>
-      </figure>
+          <br><br>
 
-      <!-- add or remove figure blocks as needed -->
-    </section>
-  </main>
+          <!-- Image section with spacing -->
+          <table width="100%" cellpadding="15">
+            <tr>
+              <td align="center">
+                <img src="mettioli-1.jpg" width="250"><br>
+                <font color="orange">Healing Through Kindness</font>
+              </td>
+
+              <td align="center">
+                <img src="Metti_Oli-2.jpg" width="250"><br>
+                <font color="orange">Strength in Family Bonds</font>
+              </td>
+
+              <td align="center">
+                <img src="mettioli-3.jpg" width="250"><br>
+                <font color="orange">Courage to Do What’s Right</font>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </center>
+
 </body>
 </html>
 
 japan.html
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Background + Content + Interval Images</title>
-  <style>
-    /* Basic reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /* Body uses the background image */
-    body {
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      /* Background image: replace 'background.jpg' with your path */
-      background-image: url(them2.jpeg);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      /* Smooth text on background */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    /* Optional overlay to improve contrast on top of background */
-    .overlay {
-      position: absolute;
-      inset: 0; /* top:0; right:0; bottom:0; left:0; */
-      background: rgba(26, 61, 200, 0.4); /* adjust opacity as needed */
-      pointer-events: none; /* allow clicks to pass through to content */
-      z-index: 0;
-    }
-
-    /* Main content container (separate tag for content) */
-    main.content {
-      position: relative;
-      z-index: 1; /* sit above the overlay */
-      width: 100%;
-      max-width: 1100px;
-      background: rgba(233, 22, 22, 0.88); /* slightly translucent card */
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(161, 233, 16, 0.25);
-      overflow: hidden;
-    }
-
-    /* Header inside content */
-    .content header {
-      margin-bottom: 18px;
-    }
-    .content h1 {
-      font-size: 1.6rem;
-      color: #111111;
-      margin-bottom: 6px;
-    }
-    .content p.lead {
-      color: #0ee62f;
-      line-height: 1.45;
-      font-size: 0.98rem;
-    }
-
-    /* Gallery of images spaced in intervals */
-    .gallery {
-      display: grid;
-      /* three columns on wide screens, fewer on small screens */
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px; /* interval spacing between images */
-      margin-top: 20px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      background: #f2de28;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 140px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      max-height: 220px;
-    }
-
-    .caption {
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      color: #f6931b;
-      background: rgba(32, 247, 236, 0.9);
-      text-align: center;
-    }
-
-    /* Make the layout responsive */
-    @media (max-width: 900px) {
-      .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    }
-    @media (max-width: 520px) {
-      body { padding: 1rem; }
-      .gallery { grid-template-columns: 1fr; gap: 12px; }
-      .content { padding: 18px; border-radius: 10px; }
-      .content h1 { font-size: 1.3rem; }
-    }
-  </style>
+  <title>DRAGON BALL</title>
 </head>
-<body>
-  <!-- overlay improves readability on top of complex backgrounds -->
-  <div class="overlay" aria-hidden="true"></div>
 
-  <!-- main content area (separate tag for all page content) -->
-  <main class="content" role="main" aria-labelledby="page-title">
-    <header>
-      <h1 id="page-title">DRAGON BALL</h1>
-      <p class="lead">“Dragon Ball follows Goku’s adventures as he protects Earth and searches for the magical Dragon Balls.</p>
-    </header>
+<body background="them2.jpeg">
 
-    <!-- Example text content -->
-    <section>
-      <p>
-        Dragon Ball is a famous Japanese animated series created by Akira Toriyama. 
-        The story follows Goku, a cheerful and powerful boy with a monkey-like tail, as he travels around the world in search of the seven magical Dragon Balls. When all seven are collected, 
-        they can summon a mighty dragon that grants one wish. The series mixes adventure, action, humor, friendship, and fantasy, making it one of the most popular and influential shows in the world. Through his journey, Goku meets many allies, 
-        faces tough challenges, and constantly grows stronger while protecting Earth from dangerous enemies. The series teaches values like courage, teamwork, determination, and kindness.
-      </p>
-    </section>
+<center>
 
-    <!-- Image gallery with images in intervals (spacing controlled by CSS grid gap) -->
-    <section class="gallery" aria-label="Image gallery">
-      <figure>
-        <!-- replace 'photo1.jpg' with your actual image -->
-        <img src="dragonball.jpg" alt="Photo 1 description" loading="lazy">
-        <figcaption class="caption">All major Dragon Ball heroes and villains together</figcaption>
-      </figure>
+  <table width="85%" bgcolor="red" cellpadding="25">
+    <tr>
+      <td align="center">
 
-      <figure>
-        <img src="dragon-ball-2.jpg" alt="Photo 2 description" loading="lazy">
-        <figcaption class="caption">Goku and Vegeta lead the action in Dragon Ball Super.</figcaption>
-      </figure>
+        <h1>DRAGON BALL</h1>
 
-      <figure>
-        <img src="AWl1ZO3.webp" alt="Photo 3 description" loading="lazy">
-        <figcaption class="caption">Universe fighters gather for a Dragon Ball Super battle.</figcaption>
-      </figure>
+        <p>
+          <b>
+            Dragon Ball follows Goku’s adventures as he protects Earth
+            and searches for the magical Dragon Balls.
+          </b>
+        </p>
 
-      <!-- add or remove figure blocks as needed -->
-    </section>
-  </main>
+        <p>
+          Dragon Ball is a famous Japanese animated series created by Akira Toriyama.
+          The story follows Goku, a cheerful and powerful boy, as he travels the world
+          searching for the seven magical Dragon Balls. When collected, they summon
+          a dragon that grants one wish. The series blends action, adventure, humor,
+          and friendship, teaching values like courage, teamwork, and determination.
+        </p>
+
+        <br>
+
+        <!-- Image Gallery -->
+        <table width="100%" cellpadding="20">
+          <tr>
+            <td align="center">
+              <img src="dragonball.jpg" width="250"><br>
+              <font color="orange">
+                All major Dragon Ball heroes and villains together
+              </font>
+            </td>
+
+            <td align="center">
+              <img src="dragon-ball-2.jpg" width="250"><br>
+              <font color="orange">
+                Goku and Vegeta lead the action in Dragon Ball Super
+              </font>
+            </td>
+
+            <td align="center">
+              <img src="AWl1ZO3.webp" width="250"><br>
+              <font color="orange">
+                Universe fighters gather for a Dragon Ball Super battle
+              </font>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</center>
+
 </body>
 </html>
 
 spain.html
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Background + Content + Interval Images</title>
-  <style>
-    /* Basic reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /* Body uses the background image */
-    body {
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      /* Background image: replace 'background.jpg' with your path */
-      background-image: url(money-heist-.avif);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      /* Smooth text on background */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    /* Optional overlay to improve contrast on top of background */
-    .overlay {
-      position: absolute;
-      inset: 0; /* top:0; right:0; bottom:0; left:0; */
-      background: rgba(26, 61, 200, 0.4); /* adjust opacity as needed */
-      pointer-events: none; /* allow clicks to pass through to content */
-      z-index: 0;
-    }
-
-    /* Main content container (separate tag for content) */
-    main.content {
-      position: relative;
-      z-index: 1; /* sit above the overlay */
-      width: 100%;
-      max-width: 1100px;
-      background: rgba(233, 22, 22, 0.88); /* slightly translucent card */
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(161, 233, 16, 0.25);
-      overflow: hidden;
-    }
-
-    /* Header inside content */
-    .content header {
-      margin-bottom: 18px;
-    }
-    .content h1 {
-      font-size: 1.6rem;
-      color: #111111;
-      margin-bottom: 6px;
-    }
-    .content p.lead {
-      color: #0ee62f;
-      line-height: 1.45;
-      font-size: 0.98rem;
-    }
-
-    /* Gallery of images spaced in intervals */
-    .gallery {
-      display: grid;
-      /* three columns on wide screens, fewer on small screens */
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px; /* interval spacing between images */
-      margin-top: 20px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      background: #f2de28;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 140px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      max-height: 220px;
-    }
-
-    .caption {
-      padding: 8px 10px;
-      font-size: 0.9rem;
-      color: #f6931b;
-      background: rgba(32, 247, 236, 0.9);
-      text-align: center;
-    }
-
-    /* Make the layout responsive */
-    @media (max-width: 900px) {
-      .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    }
-    @media (max-width: 520px) {
-      body { padding: 1rem; }
-      .gallery { grid-template-columns: 1fr; gap: 12px; }
-      .content { padding: 18px; border-radius: 10px; }
-      .content h1 { font-size: 1.3rem; }
-    }
-  </style>
+  <title>MONEY HEIST</title>
 </head>
-<body>
-  <!-- overlay improves readability on top of complex backgrounds -->
-  <div class="overlay" aria-hidden="true"></div>
 
-  <!-- main content area (separate tag for all page content) -->
-  <main class="content" role="main" aria-labelledby="page-title">
-    <header>
-      <h1 id="page-title">MONEY HEIST</h1>
-      <p class="lead">Money Heist follows a brilliant mastermind and his team as they carry out daring, high-pressure robberies filled with strategy, suspense, and emotion.</p>
-    </header>
+<body background="money-heist-.avif">
 
-    <!-- Example text content -->
-    <section>
-      <p>
-       Money Heist is a Spanish crime‑thriller series that follows The Professor, a mastermind who leads a daring plan to infiltrate the Royal Mint of Spain and print billions of euros.
-       The concept centers on rebellion against the system, with robbers in red jumpsuits and Salvador Dalí masks becoming symbols of resistance. 
-       Main roles include Tokyo, Berlin, Nairobi, Rio, Denver, Moscow, Helsinki, and Oslo, each contributing unique skills to the heist. They ultimately succeed through 
-       meticulous planning, unity, and public sympathy, making the series an intense crime drama thriller filled with suspense and emotion
+<center>
 
-      </p>
-    </section>
+  <table width="85%" bgcolor="red" cellpadding="25">
+    <tr>
+      <td align="center">
 
-    <!-- Image gallery with images in intervals (spacing controlled by CSS grid gap) -->
-    <section class="gallery" aria-label="Image gallery">
-      <figure>
-        <!-- replace 'photo1.jpg' with your actual image -->
-        <img src="moneyhist1.jpeg" alt="Photo 1 description" loading="lazy">
-        <figcaption class="caption">The Professor’s team unites in their iconic red suits to execute a high-stakes, mastermind-planned heist</figcaption>
-      </figure>
+        <h1>MONEY HEIST</h1>
 
-      <figure>
-        <img src="arpan-gupta-final-composite-2.jpg" alt="Photo 2 description" loading="lazy">
-        <figcaption class="caption">The story centers around a daring heist inside Spain’s Royal Mint, planned with precision and secrecy.</figcaption>
-      </figure>
+        <p>
+          <b>
+            Money Heist follows a brilliant mastermind and his team as they carry out
+            daring, high-pressure robberies filled with strategy, suspense, and emotion.
+          </b>
+        </p>
 
-      <figure>
-        <img src="FireShotmoneyhist-3.webp" alt="Photo 3 description" loading="lazy">
-        <figcaption class="caption">The gang faces escalating danger and emotional battles as their heist turns into a desperate fight to escape</figcaption>
-      </figure>
+        <p>
+          Money Heist is a Spanish crime-thriller series centered on The Professor,
+          who plans an audacious heist at the Royal Mint of Spain to print billions of euros.
+          The robbers, wearing red jumpsuits and Salvador Dalí masks, become symbols of rebellion.
+          Characters like Tokyo, Berlin, Nairobi, Rio, Denver, and others contribute their
+          unique skills. The series is known for its intense suspense, emotional depth,
+          and clever storytelling.
+        </p>
 
-      <!-- add or remove figure blocks as needed -->
-    </section>
-  </main>
-</body>
-</html>
+        <br>
+
+        <!-- Image Gallery -->
+        <table width="100%" cellpadding="20">
+          <tr>
+            <td align="center">
+              <img src="moneyhist1.jpeg" width="250"><br>
+              <font color="orange">
+                The Professor’s team unites in iconic red suits for a high-stakes heist
+              </font>
+            </td>
+
+            <td align="center">
+              <img src="arpan-gupta-final-composite-2.jpg" width="250"><br>
+              <font color="orange">
+                A daring and secret plan unfolds inside Spain’s Royal Mint
+              </font>
+            </td>
+
+            <td align="center">
+              <img src="FireShotmoneyhist-3.webp" width="250"><br>
+              <font color="orange">
+                The gang faces danger and emotional struggle during their escape
+              </font>
+            </td>
+          <
+
 ```
 
 ![alt text](<Screenshot 2025-12-11 000941.png>)
-![alt text](<Screenshot 2025-12-11 001006.png>)
-![alt text](<Screenshot 2025-12-11 000953.png>)
-![alt text](<Screenshot 2025-12-11 000925.png>)
+![alt text](<Screenshot 2025-12-15 110953.png>)
+![alt text](<Screenshot 2025-12-15 111117.png>)
+![alt text](<Screenshot 2025-12-15 111137.png>)
 ## RESULT
 The program for implementing image maps using HTML is executed successfully.
