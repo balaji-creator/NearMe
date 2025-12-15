@@ -48,7 +48,7 @@ home.html
 </map> 
 </body>
 </html>
-```
+
 india.html
 !doctype html>
 <html lang="en">
